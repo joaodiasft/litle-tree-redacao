@@ -56,41 +56,122 @@ export function CtaCard({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      whileHover={{ scale: enabled ? 1.02 : 1 }}
-      transition={{ duration: 0.4 }}
-      className={cn("relative", className)}
+      initial={{ opacity: 0, y: 30, scale: 0.9 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      whileHover={{ 
+        scale: enabled ? 1.03 : 1,
+        y: enabled ? -5 : 0,
+      }}
+      whileTap={{ scale: enabled ? 0.98 : 1 }}
+      transition={{ 
+        duration: 0.5,
+        type: "spring",
+        stiffness: 200
+      }}
+      className={cn("relative group", className)}
     >
       <Card
         className={cn(
-          "relative overflow-hidden cursor-pointer border-0 shadow-lg",
+          "relative overflow-hidden cursor-pointer border-0 shadow-2xl transition-all duration-300",
+          "hover:shadow-3xl",
           bgColor,
-          !enabled && "opacity-60 cursor-not-allowed"
+          !enabled && "opacity-60 cursor-not-allowed",
+          "shine"
         )}
         onClick={handleClick}
       >
-        {/* Bolhas decorativas no fundo */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-4 right-4 w-24 h-24 rounded-full bg-white" />
-          <div className="absolute bottom-4 left-4 w-16 h-16 rounded-full bg-white" />
-          <div className="absolute top-1/2 right-1/4 w-12 h-12 rounded-full bg-white" />
-        </div>
+        {/* Gradiente animado no fundo */}
+        <motion.div
+          className="absolute inset-0 opacity-20"
+          animate={{
+            background: variant === "primary" 
+              ? "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 100%)"
+              : "linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 100%)"
+          }}
+          transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
+        />
 
-        <div className="relative p-6 flex items-center justify-between gap-4">
+        {/* Bolhas decorativas animadas */}
+        <motion.div 
+          className="absolute inset-0 opacity-10"
+          initial={{ opacity: 0.1 }}
+          animate={{ opacity: [0.1, 0.15, 0.1] }}
+          transition={{ duration: 4, repeat: Infinity }}
+        >
+          <motion.div
+            className="absolute top-4 right-4 w-24 h-24 rounded-full bg-white"
+            animate={{
+              scale: [1, 1.2, 1],
+              x: [0, 10, 0],
+              y: [0, -10, 0],
+            }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute bottom-4 left-4 w-16 h-16 rounded-full bg-white"
+            animate={{
+              scale: [1, 1.3, 1],
+              x: [0, -10, 0],
+              y: [0, 10, 0],
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute top-1/2 right-1/4 w-12 h-12 rounded-full bg-white"
+            animate={{
+              scale: [1, 1.1, 1],
+              rotate: [0, 180, 360],
+            }}
+            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+          />
+        </motion.div>
+
+        <div className="relative p-6 flex items-center justify-between gap-4 z-10">
           <div className="flex-1">
-            {badge && <div className="mb-2">{badge}</div>}
-            <h3 className={cn("text-xl font-bold mb-2", textColor)}>
+            {badge && (
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.2, type: "spring" }}
+                className="mb-2"
+              >
+                {badge}
+              </motion.div>
+            )}
+            <motion.h3
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.1 }}
+              className={cn("text-xl font-bold mb-2", textColor)}
+            >
               {title}
-            </h3>
-            <p className={cn("text-sm opacity-90", textColor)}>
+            </motion.h3>
+            <motion.p
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2 }}
+              className={cn("text-sm opacity-90", textColor)}
+            >
               {description}
-            </p>
+            </motion.p>
           </div>
           {Icon && (
-            <div className={cn("flex-shrink-0", textColor)}>
-              <Icon size={32} />
-            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0, rotate: -180 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              whileHover={{ 
+                scale: 1.2,
+                rotate: 10,
+              }}
+              transition={{ 
+                delay: 0.3,
+                type: "spring",
+                stiffness: 200
+              }}
+              className={cn("flex-shrink-0", textColor)}
+            >
+              <Icon size={36} />
+            </motion.div>
           )}
         </div>
       </Card>

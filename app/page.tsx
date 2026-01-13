@@ -24,6 +24,7 @@ import { track, TRACKING_EVENTS } from "@/lib/tracking"
 import { useEffect } from "react"
 import * as Icons from "lucide-react"
 import { useRouter } from "next/navigation"
+import { motion } from "framer-motion"
 
 export default function Home() {
   const router = useRouter()
@@ -34,38 +35,53 @@ export default function Home() {
       <Headline />
 
       {/* CTAs principais */}
-      <div className="px-6 space-y-4 mb-6">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+        className="px-6 space-y-5 mb-8"
+      >
         {LINKS_CONFIG.map((link, index) => {
           const Icon =
             (Icons[link.icon as keyof typeof Icons] as any) || Icons.MessageCircle
 
           return (
-            <CtaCard
+            <motion.div
               key={link.id}
-              title={link.label}
-              description={link.description}
-              icon={Icon}
-              onClick={
-                link.type === "whatsapp"
-                  ? () => openWhatsApp("matricula")
-                  : link.type === "internal"
-                  ? () => {
-                      if (link.href) {
-                        track(TRACKING_EVENTS.SITE_OPEN_CLICK)
-                        router.push(link.href)
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ 
+                delay: 0.7 + index * 0.15,
+                type: "spring",
+                stiffness: 100
+              }}
+            >
+              <CtaCard
+                title={link.label}
+                description={link.description}
+                icon={Icon}
+                onClick={
+                  link.type === "whatsapp"
+                    ? () => openWhatsApp("matricula")
+                    : link.type === "internal"
+                    ? () => {
+                        if (link.href) {
+                          track(TRACKING_EVENTS.SITE_OPEN_CLICK)
+                          router.push(link.href)
+                        }
                       }
-                    }
-                  : undefined
-              }
-              href={link.type === "internal" ? link.href || undefined : undefined}
-              variant={index % 2 === 0 ? "primary" : "dark"}
-              highlight={link.highlight}
-              enabled={link.enabled}
-              badge={null}
-            />
+                    : undefined
+                }
+                href={link.type === "internal" ? link.href || undefined : undefined}
+                variant={index % 2 === 0 ? "primary" : "dark"}
+                highlight={link.highlight}
+                enabled={link.enabled}
+                badge={null}
+              />
+            </motion.div>
           )
         })}
-      </div>
+      </motion.div>
 
       <BorderCallout>
         Selecione abaixo e descubra o caminho para sua nota máxima no ENEM.
