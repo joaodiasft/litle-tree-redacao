@@ -4,8 +4,8 @@ import { PageShell } from "@/components/PageShell"
 import { HeaderBrand } from "@/components/HeaderBrand"
 import { Headline } from "@/components/Headline"
 import { CtaCard } from "@/components/CtaCard"
-import { BorderCallout } from "@/components/BorderCallout"
 import { CategoryGrid } from "@/components/CategoryGrid"
+import { Hand, Sparkles } from "lucide-react"
 import { SectionTitle } from "@/components/SectionTitle"
 import { HowItWorksStepper } from "@/components/HowItWorksStepper"
 import { FaqAccordion } from "@/components/FaqAccordion"
@@ -83,9 +83,66 @@ export default function Home() {
         })}
       </motion.div>
 
-      <BorderCallout>
-        Selecione abaixo e descubra o caminho para sua nota máxima no ENEM.
-      </BorderCallout>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9, y: 20 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ 
+          duration: 0.6, 
+          delay: 1.2,
+          type: "spring",
+          stiffness: 150
+        }}
+        className="mx-6 my-8"
+      >
+        <Card className="p-6 border-2 border-primary bg-gradient-to-br from-primary/5 via-background to-primary/5 shadow-lg backdrop-blur-sm group cursor-pointer hover:border-primary-strong transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+          <div className="flex items-center gap-4">
+            <motion.div
+              animate={{ 
+                rotate: [0, 10, -10, 0],
+                scale: [1, 1.1, 1]
+              }}
+              transition={{ 
+                duration: 2,
+                repeat: Infinity,
+                repeatDelay: 1
+              }}
+              className="flex-shrink-0"
+            >
+              <Hand className="text-primary" size={28} />
+            </motion.div>
+            <div className="flex-1">
+              <motion.p
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 1.4 }}
+                className="text-base font-bold text-dark mb-1 group-hover:text-primary-strong transition-colors"
+              >
+                Selecione uma categoria abaixo
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.5 }}
+                className="text-sm text-gray-text"
+              >
+                Descubra o caminho completo para sua nota máxima no ENEM
+              </motion.p>
+            </div>
+            <motion.div
+              animate={{ 
+                opacity: [0.3, 1, 0.3],
+                scale: [1, 1.2, 1]
+              }}
+              transition={{ 
+                duration: 2,
+                repeat: Infinity
+              }}
+            >
+              <Sparkles className="text-primary w-5 h-5" />
+            </motion.div>
+          </div>
+        </Card>
+      </motion.div>
 
       <CategoryGrid />
 

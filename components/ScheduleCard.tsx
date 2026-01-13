@@ -1,14 +1,16 @@
 "use client"
 
 import { Card } from "@/components/ui/card"
-import { Clock } from "lucide-react"
+import { Clock, Calendar } from "lucide-react"
 import { motion } from "framer-motion"
 
 interface Schedule {
   id: string
+  codigo: string
   dia: string
   horario: string
   duracao: string
+  materia: string
   turma: string
 }
 
@@ -20,23 +22,42 @@ interface ScheduleCardProps {
 export function ScheduleCard({ schedule, index }: ScheduleCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 30, scale: 0.9 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: index * 0.1 }}
+      whileHover={{ scale: 1.02, y: -5 }}
+      transition={{ 
+        duration: 0.5, 
+        delay: index * 0.1,
+        type: "spring",
+        stiffness: 150
+      }}
     >
-      <Card className="p-6 border-2 border-border hover:border-primary transition-colors">
-        <div className="flex items-start justify-between">
-          <div>
-            <h3 className="text-lg font-bold text-dark mb-1">
-              {schedule.dia}
-            </h3>
-            <div className="flex items-center gap-2 text-gray-text mb-2">
-              <Clock size={16} />
-              <span className="text-sm">{schedule.horario}</span>
+      <Card className="p-6 border-2 border-border hover:border-primary-strong transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-background to-gray-light group">
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-3">
+              <motion.div
+                className="px-3 py-1.5 rounded-lg bg-primary text-white font-bold text-sm"
+                whileHover={{ scale: 1.1 }}
+              >
+                {schedule.codigo}
+              </motion.div>
+              <div className="flex items-center gap-2 text-primary font-semibold">
+                <Calendar size={16} />
+                <span className="text-sm">{schedule.dia}</span>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-2 text-gray-text mb-3">
+              <Clock size={18} className="text-primary" />
+              <span className="text-base font-medium">{schedule.horario}</span>
               <span className="text-sm">• {schedule.duracao}</span>
             </div>
-            <p className="text-sm text-primary font-medium">{schedule.turma}</p>
+            
+            <div className="px-3 py-2 rounded-lg bg-primary/10 border border-primary/20">
+              <p className="text-sm font-bold text-primary">{schedule.materia}</p>
+            </div>
           </div>
         </div>
       </Card>
