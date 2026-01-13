@@ -25,7 +25,15 @@ export function CategoryCard({ category }: CategoryCardProps) {
   const handleClick = () => {
     if (!category.enabled) return
     track(TRACKING_EVENTS.CATEGORY_CLICK, { category: category.id })
-    smoothScrollTo(category.anchor, 80)
+    
+    // Navegar para páginas específicas
+    if (category.id === "redacao") {
+      window.location.href = "/redacao"
+    } else if (category.id === "resultados") {
+      window.location.href = "/resultados"
+    } else {
+      smoothScrollTo(category.anchor, 80)
+    }
   }
 
   return (

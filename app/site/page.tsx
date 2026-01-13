@@ -10,6 +10,7 @@ import { TestimonialCarousel } from "@/components/TestimonialCarousel"
 import { FaqAccordion } from "@/components/FaqAccordion"
 import { FloatingWhatsAppFAB } from "@/components/FloatingWhatsAppFAB"
 import { BackToTop } from "@/components/BackToTop"
+import { ModernFooter } from "@/components/ModernFooter"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ArrowLeft, MessageCircle, MapPin } from "lucide-react"
@@ -21,8 +22,8 @@ import {
   COMPETENCIAS,
   TESTIMONIALS,
   FAQ,
-  CONTACT,
   BRANDING,
+  CONTACT,
 } from "@/data/config"
 import { openWhatsApp } from "@/lib/whatsapp"
 import { CopyButton } from "@/components/CopyButton"
@@ -173,22 +174,8 @@ export default function SitePage() {
         </div>
       </section>
 
-      {/* Rodapé */}
-      <footer className="px-6 py-8 text-center border-t border-border mt-8">
-        <p className="text-sm text-gray-text mb-2">
-          {CONTACT.endereco.rua}, {CONTACT.endereco.bairro}
-        </p>
-        <p className="text-sm text-gray-text mb-2">
-          {CONTACT.endereco.cidade} - {CONTACT.endereco.uf}, CEP:{" "}
-          {CONTACT.endereco.cep}
-        </p>
-        <p className="text-sm text-gray-text mb-4">
-          Instagram: {BRANDING.instagram}
-        </p>
-        <p className="text-xs text-gray-text">
-          © {new Date().getFullYear()} {BRANDING.name}
-        </p>
-      </footer>
+      {/* Rodapé Moderno */}
+      <ModernFooter />
 
       <FloatingWhatsAppFAB />
       <BackToTop />
