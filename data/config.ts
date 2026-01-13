@@ -35,8 +35,8 @@ export const CONTACT = {
 } as const;
 
 export const HEADLINES = {
-  main: "A sua aprovação começa\ncom uma redação nota 1000.",
-  subtitle: "Treino, correção (C1–C5) e acompanhamento.",
+  main: "Sua aprovação começa\ncom uma redação nota 1000",
+  subtitle: "Treino, correção detalhada (C1–C5) e acompanhamento personalizado.",
 } as const;
 
 export const SCHEDULES = [
@@ -135,8 +135,8 @@ export const CATEGORIES = [
 export const LINKS_CONFIG = [
   {
     id: "whatsapp-matricula",
-    label: "Fale com a gente",
-    description: "Matrícula e informações no WhatsApp",
+    label: "Fale conosco",
+    description: "Matrícula e informações via WhatsApp",
     icon: "MessageCircle",
     badge: null,
     highlight: true,
@@ -148,7 +148,7 @@ export const LINKS_CONFIG = [
   {
     id: "horarios",
     label: "Horários e Turmas",
-    description: "Escolha o melhor horário",
+    description: "Escolha o melhor horário para você",
     icon: "Calendar",
     badge: null,
     highlight: false,
@@ -160,7 +160,7 @@ export const LINKS_CONFIG = [
   {
     id: "valores",
     label: "Planos e Valores",
-    description: "Módulos por turma • até 10x",
+    description: "Módulos por turma • Parcelamento em até 10x",
     icon: "CreditCard",
     badge: null,
     highlight: false,
@@ -171,8 +171,8 @@ export const LINKS_CONFIG = [
   },
   {
     id: "site",
-    label: "Conhecer o site",
-    description: "Saiba mais sobre nosso método",
+    label: "Conheça nosso site",
+    description: "Saiba mais sobre nosso método e diferenciais",
     icon: "Globe",
     badge: null,
     highlight: false,
@@ -185,14 +185,14 @@ export const LINKS_CONFIG = [
 
 export const BENEFITS = {
   redacao: [
-    "Correção detalhada e comentada (C1–C5)",
-    "Feedback por trecho",
-    "Plano de melhoria personalizado",
+    "Correção detalhada e comentada seguindo critérios C1–C5 do ENEM",
+    "Feedback específico por trecho da redação",
+    "Plano de melhoria personalizado para cada aluno",
   ],
   geral: [
-    "Correção detalhada e comentada",
-    "Acompanhamento contínuo",
-    "Método prático e direto ao ponto",
+    "Correção detalhada e comentada por professores especializados",
+    "Acompanhamento contínuo do seu progresso",
+    "Método prático e direto, focado em resultados",
   ],
 } as const;
 
@@ -200,27 +200,27 @@ export const HOW_IT_WORKS = [
   {
     step: 1,
     title: "Matrícula",
-    description: "Entre em contato e escolha sua turma",
+    description: "Entre em contato via WhatsApp e escolha a turma ideal para você",
   },
   {
     step: 2,
-    title: "Aulas",
-    description: "Aulas presenciais com metodologia comprovada",
+    title: "Aulas Presenciais",
+    description: "Participe de aulas presenciais em Goiânia com metodologia comprovada",
   },
   {
     step: 3,
-    title: "Treinos",
-    description: "Pratique com temas reais do ENEM",
+    title: "Treinos Práticos",
+    description: "Pratique com temas reais do ENEM e desenvolva sua escrita",
   },
   {
     step: 4,
-    title: "Correção",
-    description: "Correção detalhada seguindo critérios C1–C5",
+    title: "Correção Detalhada",
+    description: "Receba correção completa seguindo todos os critérios C1–C5 do ENEM",
   },
   {
     step: 5,
-    title: "Evolução",
-    description: "Acompanhe seu progresso até a nota máxima",
+    title: "Evolução Contínua",
+    description: "Acompanhe seu progresso e evolua até alcançar a nota máxima",
   },
 ] as const;
 
@@ -228,31 +228,31 @@ export const COMPETENCIAS = [
   {
     id: "c1",
     titulo: "C1: Domínio da Escrita Formal",
-    descricao: "Avalia o seu domínio da norma culta da língua portuguesa, incluindo aspectos gramaticais, ortográficos e de pontuação.",
+    descricao: "Avalia seu domínio da norma culta da língua portuguesa, incluindo aspectos gramaticais, ortográficos e de pontuação. Trabalhamos para eliminar erros e aprimorar sua escrita formal.",
     icon: "PenTool",
   },
   {
     id: "c2",
     titulo: "C2: Compreensão e Conhecimento",
-    descricao: "Avalia sua capacidade de compreender o tema e demonstrar conhecimento sobre ele.",
+    descricao: "Avalia sua capacidade de compreender o tema proposto e demonstrar conhecimento sobre ele, utilizando informações dos textos de apoio e seu repertório sociocultural.",
     icon: "BookOpen",
   },
   {
     id: "c3",
     titulo: "C3: Organização e Interpretação",
-    descricao: "Avalia a organização das ideias e a interpretação dos textos de apoio.",
+    descricao: "Avalia a organização das ideias em parágrafos bem estruturados e a interpretação adequada dos textos de apoio, garantindo uma argumentação clara e objetiva.",
     icon: "Workflow",
   },
   {
     id: "c4",
     titulo: "C4: Coesão e Coerência",
-    descricao: "Avalia a coesão textual e a coerência argumentativa.",
+    descricao: "Avalia a coesão textual (uso adequado de conectivos) e a coerência argumentativa, garantindo que suas ideias estejam bem conectadas e façam sentido.",
     icon: "Link",
   },
   {
     id: "c5",
     titulo: "C5: Proposta de Intervenção",
-    descricao: "Avalia a proposta de solução para o problema apresentado.",
+    descricao: "Avalia sua proposta de solução para o problema apresentado, verificando se ela é detalhada, viável e respeita os direitos humanos.",
     icon: "Lightbulb",
   },
 ] as const;
@@ -261,19 +261,19 @@ export const TESTIMONIALS = [
   {
     id: "1",
     nome: "Maria Silva",
-    texto: "Consegui nota 960 na redação do ENEM! O método é incrível.",
+    texto: "Consegui nota 960 na redação do ENEM! O método é incrível e os professores são muito dedicados. A correção detalhada fez toda a diferença!",
     nota: 960,
   },
   {
     id: "2",
     nome: "João Santos",
-    texto: "A correção detalhada me ajudou a identificar exatamente onde melhorar.",
+    texto: "A correção detalhada me ajudou a identificar exatamente onde melhorar. Evolui muito durante o curso e recomendo para todos que querem uma nota alta.",
     nota: 940,
   },
   {
     id: "3",
     nome: "Ana Costa",
-    texto: "Professores excelentes e acompanhamento personalizado. Recomendo!",
+    texto: "Professores excelentes e acompanhamento personalizado. O curso superou minhas expectativas e me deu a confiança necessária para o ENEM. Recomendo!",
     nota: 980,
   },
 ] as const;
@@ -281,15 +281,15 @@ export const TESTIMONIALS = [
 export const MATERIALS = [
   {
     id: "1",
-    titulo: "Material gratuito",
-    descricao: "Apostilas e exercícios",
+    titulo: "Material Gratuito",
+    descricao: "Apostilas, exercícios e conteúdos exclusivos para você começar seus estudos",
     href: "#",
     enabled: true,
   },
   {
     id: "2",
-    titulo: "Avaliação rápida",
-    descricao: "Teste seu nível de escrita",
+    titulo: "Avaliação Rápida",
+    descricao: "Teste seu nível de escrita e descubra em quais competências você precisa focar",
     href: "#",
     enabled: true,
   },
@@ -298,33 +298,33 @@ export const MATERIALS = [
 export const FAQ = [
   {
     id: "1",
-    pergunta: "Como funciona a correção?",
-    resposta: "Nossa correção segue os critérios oficiais do ENEM (C1–C5), com feedback detalhado por trecho e plano de melhoria personalizado.",
+    pergunta: "Como funciona a correção das redações?",
+    resposta: "Nossa correção segue rigorosamente os critérios oficiais do ENEM (C1–C5). Cada redação recebe feedback detalhado por trecho, com comentários específicos sobre o que melhorar e um plano de melhoria personalizado para cada aluno.",
   },
   {
     id: "2",
-    pergunta: "Preciso ter experiência prévia?",
-    resposta: "Não! Nosso método é adaptado para todos os níveis, desde iniciantes até quem quer aprimorar a nota.",
+    pergunta: "Preciso ter experiência prévia em redação?",
+    resposta: "Não! Nosso método é adaptado para todos os níveis. Trabalhamos desde alunos iniciantes até aqueles que já têm uma boa base e querem aprimorar para alcançar a nota máxima.",
   },
   {
     id: "3",
     pergunta: "Como são as aulas?",
-    resposta: "Aulas presenciais em Goiânia, com turmas pequenas para acompanhamento individualizado.",
+    resposta: "As aulas são 100% presenciais em Goiânia, com turmas pequenas para garantir acompanhamento individualizado. Nossos professores são especializados e utilizam uma metodologia comprovada para o sucesso no ENEM.",
   },
   {
     id: "4",
     pergunta: "Qual a duração do curso?",
-    resposta: "Oferecemos módulos flexíveis. Você pode escolher o plano que melhor se adapta à sua necessidade.",
+    resposta: "Oferecemos módulos flexíveis que se adaptam à sua necessidade. Você pode escolher entre diferentes planos e turmas, permitindo que organize seus estudos da melhor forma.",
   },
   {
     id: "5",
-    pergunta: "Posso parcelar?",
-    resposta: "Sim! Oferecemos parcelamento em até 10x sem juros (consulte condições).",
+    pergunta: "Posso parcelar o pagamento?",
+    resposta: "Sim! Oferecemos parcelamento em até 10x sem juros. Entre em contato via WhatsApp para conhecer todas as condições e formas de pagamento disponíveis.",
   },
   {
     id: "6",
-    pergunta: "Onde fica o curso?",
-    resposta: "Rua F QD 159 LT 1, Sala 1, Parque Tremendão, Goiânia - GO. CEP: 74.475-060",
+    pergunta: "Onde fica localizado o curso?",
+    resposta: "Estamos localizados na Rua F QD 159 LT 1, Sala 1, no bairro Parque Tremendão, em Goiânia - GO. CEP: 74.475-060. Você pode abrir a localização no Google Maps clicando no botão disponível.",
   },
 ] as const;
 

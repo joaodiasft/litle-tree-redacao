@@ -28,9 +28,15 @@ export function CopyButton({
     const success = await copyToClipboard(text, label)
     if (success) {
       setCopied(true)
+      const message = label === "address" 
+        ? "Endereço copiado para a área de transferência!"
+        : label === "phone"
+        ? "Número copiado para a área de transferência!"
+        : "Copiado para a área de transferência!"
+      
       toast({
         title: "Copiado!",
-        description: "Endereço copiado para a área de transferência.",
+        description: message,
         variant: "success",
       })
       setTimeout(() => setCopied(false), 2000)

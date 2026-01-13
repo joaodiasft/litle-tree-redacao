@@ -57,8 +57,7 @@ export default function SitePage() {
           Sua aprovação começa aqui
         </h2>
         <p className="text-lg text-gray-text mb-8 max-w-md mx-auto">
-          Correção comentada, acompanhamento e estratégias para a nota máxima
-          no ENEM.
+          Correção comentada, acompanhamento personalizado e estratégias comprovadas para alcançar a nota máxima no ENEM.
         </p>
         <Button
           size="lg"

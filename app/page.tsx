@@ -98,7 +98,7 @@ export default function Home() {
       </div>
 
       <BorderCallout>
-        Selecione abaixo e veja o caminho para sua nota máxima.
+        Selecione abaixo e descubra o caminho para sua nota máxima no ENEM.
       </BorderCallout>
 
       <CategoryGrid />
@@ -122,7 +122,7 @@ export default function Home() {
           ))}
           <div className="text-center mt-4">
             <p className="text-sm text-gray-text">
-              Parcelamento até 10x sem juros (consulte condições)
+              Parcelamento em até 10x sem juros (consulte condições)
             </p>
           </div>
         </div>

@@ -36,16 +36,19 @@ export function LeadForm() {
     >
       <Card className="p-6 border-2 border-primary">
         <h3 className="text-xl font-bold text-dark mb-4">
-          Quer saber mais?
+          Quer saber mais sobre o curso?
         </h3>
+        <p className="text-sm text-gray-text mb-4">
+          Preencha o formulário e entre em contato conosco via WhatsApp para receber todas as informações.
+        </p>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <Label htmlFor="nome">Nome</Label>
+            <Label htmlFor="nome">Nome completo</Label>
             <Input
               id="nome"
               value={nome}
               onChange={(e) => setNome(e.target.value)}
-              placeholder="Seu nome"
+              placeholder="Digite seu nome completo"
               required
             />
           </div>
@@ -66,7 +69,7 @@ export function LeadForm() {
               id="objetivo"
               value={objetivo}
               onChange={(e) => setObjetivo(e.target.value)}
-              placeholder="ENEM / Concurso / Vestibular"
+              placeholder="Ex: ENEM, Concurso, Vestibular"
               required
             />
           </div>
