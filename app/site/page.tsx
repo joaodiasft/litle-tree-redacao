@@ -6,7 +6,6 @@ import { SectionTitle } from "@/components/SectionTitle"
 import { HowItWorksStepper } from "@/components/HowItWorksStepper"
 import { InfoCard } from "@/components/InfoCard"
 import { CompetenciaCard } from "@/components/CompetenciaCard"
-import { FaqAccordion } from "@/components/FaqAccordion"
 import { FloatingWhatsAppFAB } from "@/components/FloatingWhatsAppFAB"
 import { BackToTop } from "@/components/BackToTop"
 import { ModernFooter } from "@/components/ModernFooter"
@@ -19,7 +18,6 @@ import {
   BENEFITS,
   HOW_IT_WORKS,
   COMPETENCIAS,
-  FAQ,
   BRANDING,
   CONTACT,
 } from "@/data/config"
@@ -108,12 +106,6 @@ export default function SitePage() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-8">
-        <SectionTitle>Perguntas Frequentes</SectionTitle>
-        <FaqAccordion items={FAQ} />
       </section>
 
       {/* Localização e Contato */}

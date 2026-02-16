@@ -7,7 +7,6 @@ import { CtaCard } from "@/components/CtaCard"
 import { CategoryGrid } from "@/components/CategoryGrid"
 import { SectionTitle } from "@/components/SectionTitle"
 import { HowItWorksStepper } from "@/components/HowItWorksStepper"
-import { FaqAccordion } from "@/components/FaqAccordion"
 import { FloatingWhatsAppFAB } from "@/components/FloatingWhatsAppFAB"
 import { BackToTop } from "@/components/BackToTop"
 import { ModernFooter } from "@/components/ModernFooter"
@@ -15,7 +14,6 @@ import { Card } from "@/components/ui/card"
 import {
   LINKS_CONFIG,
   HOW_IT_WORKS,
-  FAQ,
 } from "@/data/config"
 import { openWhatsApp } from "@/lib/whatsapp"
 import { track, TRACKING_EVENTS } from "@/lib/tracking"
@@ -103,12 +101,6 @@ export default function Home() {
       <section id="como-funciona" className="py-8 scroll-mt-20">
         <SectionTitle>Como Funciona</SectionTitle>
         <HowItWorksStepper steps={HOW_IT_WORKS} />
-      </section>
-
-      {/* Seção FAQ */}
-      <section id="faq" className="py-8 scroll-mt-20">
-        <SectionTitle>Perguntas Frequentes</SectionTitle>
-        <FaqAccordion items={FAQ} />
       </section>
 
       {/* Rodapé Moderno */}
