@@ -17,7 +17,6 @@ import {
   LINKS_CONFIG,
   HOW_IT_WORKS,
   FAQ,
-  MATERIALS,
 } from "@/data/config"
 import { openWhatsApp } from "@/lib/whatsapp"
 import { track, TRACKING_EVENTS } from "@/lib/tracking"
@@ -150,22 +149,6 @@ export default function Home() {
       <section id="como-funciona" className="py-8 scroll-mt-20">
         <SectionTitle>Como Funciona</SectionTitle>
         <HowItWorksStepper steps={HOW_IT_WORKS} />
-      </section>
-
-      {/* Seção Materiais */}
-      <section id="materiais" className="py-8 scroll-mt-20">
-        <SectionTitle>Materiais Gratuitos</SectionTitle>
-        <div className="px-6 space-y-4">
-          {MATERIALS.map((material) => (
-            <Card
-              key={material.id}
-              className="p-6 border-2 border-border hover:border-primary transition-colors cursor-pointer"
-            >
-              <h3 className="font-bold text-dark mb-2">{material.titulo}</h3>
-              <p className="text-sm text-gray-text">{material.descricao}</p>
-            </Card>
-          ))}
-        </div>
       </section>
 
       {/* Seção FAQ */}
