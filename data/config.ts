@@ -316,32 +316,77 @@ export const FAQ = [
   {
     id: "1",
     pergunta: "Como funciona a correção das redações?",
-    resposta: "Nossa correção segue rigorosamente os critérios oficiais do ENEM (C1–C5). Cada redação recebe feedback detalhado por trecho, com comentários específicos sobre o que melhorar e um plano de melhoria personalizado para cada aluno.",
+    resposta: "Nossa correção segue rigorosamente os critérios oficiais do ENEM (C1–C5). Cada redação recebe feedback detalhado por trecho, com comentários específicos sobre o que melhorar e um plano de melhoria personalizado para cada aluno. Trabalhamos cada competência individualmente, garantindo que você entenda exatamente onde precisa evoluir para alcançar a nota máxima.",
   },
   {
     id: "2",
     pergunta: "Preciso ter experiência prévia em redação?",
-    resposta: "Não! Nosso método é adaptado para todos os níveis. Trabalhamos desde alunos iniciantes até aqueles que já têm uma boa base e querem aprimorar para alcançar a nota máxima.",
+    resposta: "Não! Nosso método é adaptado para todos os níveis. Trabalhamos desde alunos iniciantes até aqueles que já têm uma boa base e querem aprimorar para alcançar a nota máxima. Nossos professores adaptam o conteúdo de acordo com o nível de cada aluno, garantindo que todos evoluam no seu ritmo.",
   },
   {
     id: "3",
     pergunta: "Como são as aulas?",
-    resposta: "As aulas são 100% presenciais em Goiânia, com turmas pequenas para garantir acompanhamento individualizado. Nossos professores são especializados e utilizam uma metodologia comprovada para o sucesso no ENEM.",
+    resposta: "As aulas são 100% presenciais em Goiânia, com turmas pequenas para garantir acompanhamento individualizado. Nossos professores são especializados e utilizam uma metodologia comprovada para o sucesso no ENEM. Durante as aulas, você pratica com temas reais, recebe explicações detalhadas sobre cada competência e tem a oportunidade de tirar todas as suas dúvidas.",
   },
   {
     id: "4",
     pergunta: "Qual a duração do curso?",
-    resposta: "Oferecemos módulos flexíveis que se adaptam à sua necessidade. Você pode escolher entre diferentes planos e turmas, permitindo que organize seus estudos da melhor forma.",
+    resposta: "Oferecemos módulos flexíveis que se adaptam à sua necessidade. Você pode escolher entre diferentes planos e turmas, permitindo que organize seus estudos da melhor forma. Cada módulo tem duração específica, e você pode fazer quantos módulos quiser até se sentir preparado para o ENEM.",
   },
   {
     id: "5",
     pergunta: "Posso parcelar o pagamento?",
-    resposta: "Sim! Oferecemos parcelamento em até 10x sem juros. Entre em contato via WhatsApp para conhecer todas as condições e formas de pagamento disponíveis.",
+    resposta: "Sim! Oferecemos parcelamento em até 10x sem juros. Entre em contato via WhatsApp para conhecer todas as condições e formas de pagamento disponíveis. Também aceitamos pagamento à vista com desconto especial.",
   },
   {
     id: "6",
     pergunta: "Onde fica localizado o curso?",
-    resposta: "Estamos localizados na Rua F QD 159 LT 1, Sala 1, no bairro Parque Tremendão, em Goiânia - GO. CEP: 74.475-060. Você pode abrir a localização no Google Maps clicando no botão disponível.",
+    resposta: "Estamos localizados na Rua F QD 159 LT 1, Sala 1, no bairro Parque Tremendão, em Goiânia - GO. CEP: 74.475-060. Você pode abrir a localização no Google Maps clicando no botão disponível. O local é de fácil acesso e possui estacionamento próximo.",
+  },
+  {
+    id: "7",
+    pergunta: "Quantas redações posso enviar por mês?",
+    resposta: "A quantidade de redações varia conforme o plano escolhido. Em geral, nossos alunos enviam entre 2 a 4 redações por mês, dependendo do módulo. Todas são corrigidas seguindo os critérios oficiais do ENEM, com feedback detalhado e plano de melhoria personalizado.",
+  },
+  {
+    id: "8",
+    pergunta: "O curso prepara apenas para o ENEM ou também para outros vestibulares?",
+    resposta: "Nosso foco principal é o ENEM, mas a metodologia que ensinamos é aplicável a qualquer vestibular que exija redação dissertativa-argumentativa. As competências trabalhadas (C1–C5) são universais e vão te preparar para qualquer prova de redação. Muitos de nossos alunos também são aprovados em vestibulares específicos usando o conhecimento adquirido aqui.",
+  },
+  {
+    id: "9",
+    pergunta: "Como funciona o acompanhamento do meu progresso?",
+    resposta: "Você recebe feedback constante sobre seu desempenho. A cada correção, identificamos seus pontos fortes e áreas de melhoria. Além disso, nossos professores estão sempre disponíveis para tirar dúvidas e orientar seu estudo. Você pode acompanhar sua evolução através das notas e comentários detalhados em cada redação corrigida.",
+  },
+  {
+    id: "10",
+    pergunta: "Preciso comprar material didático?",
+    resposta: "Não! Todo o material necessário é fornecido pelo curso. Você recebe apostilas, exercícios e materiais complementares gratuitamente. Também disponibilizamos materiais extras online para você estudar em casa e aprofundar seus conhecimentos.",
+  },
+  {
+    id: "11",
+    pergunta: "Posso fazer mais de um módulo ao mesmo tempo?",
+    resposta: "Sim! Você pode fazer múltiplos módulos simultaneamente, como Redação e Matemática, ou Redação e Exatas. Isso permite que você otimize seu tempo e prepare todas as áreas necessárias para o ENEM de forma integrada. Entre em contato conosco para montarmos o melhor plano de estudos para você.",
+  },
+  {
+    id: "12",
+    pergunta: "E se eu perder uma aula?",
+    resposta: "Entendemos que imprevistos acontecem. Você pode entrar em contato conosco para combinar uma reposição ou receber o material da aula perdida. Nosso objetivo é garantir que você não perca nenhum conteúdo importante do curso.",
+  },
+  {
+    id: "13",
+    pergunta: "O curso oferece simulados?",
+    resposta: "Sim! Realizamos simulados periódicos para que você possa testar seus conhecimentos e se familiarizar com o formato da prova do ENEM. Os simulados são corrigidos seguindo os mesmos critérios oficiais, dando a você uma experiência realista do que será o exame.",
+  },
+  {
+    id: "14",
+    pergunta: "Qual a diferença entre os módulos de Redação, Matemática e Exatas?",
+    resposta: "O módulo de Redação foca exclusivamente na produção textual e correção seguindo critérios C1–C5 do ENEM. O módulo de Matemática trabalha matemática específica para o ENEM. O módulo de Exatas abrange Química, Física e Matemática de forma integrada. Você pode escolher o módulo que mais precisa ou fazer todos para uma preparação completa.",
+  },
+  {
+    id: "15",
+    pergunta: "Como posso me matricular?",
+    resposta: "É muito simples! Entre em contato conosco via WhatsApp através do botão 'Fale conosco' na página principal. Nossa equipe vai te ajudar a escolher a melhor turma e horário para você, explicar todos os detalhes do curso e realizar sua matrícula. Estamos prontos para te atender!",
   },
 ] as const;
 
