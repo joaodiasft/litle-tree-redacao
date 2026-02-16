@@ -6,7 +6,6 @@ import { SectionTitle } from "@/components/SectionTitle"
 import { HowItWorksStepper } from "@/components/HowItWorksStepper"
 import { InfoCard } from "@/components/InfoCard"
 import { CompetenciaCard } from "@/components/CompetenciaCard"
-import { TestimonialCarousel } from "@/components/TestimonialCarousel"
 import { FaqAccordion } from "@/components/FaqAccordion"
 import { FloatingWhatsAppFAB } from "@/components/FloatingWhatsAppFAB"
 import { BackToTop } from "@/components/BackToTop"
@@ -20,7 +19,6 @@ import {
   BENEFITS,
   HOW_IT_WORKS,
   COMPETENCIAS,
-  TESTIMONIALS,
   FAQ,
   BRANDING,
   CONTACT,
@@ -110,12 +108,6 @@ export default function SitePage() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Depoimentos */}
-      <section className="py-8">
-        <SectionTitle>Depoimentos</SectionTitle>
-        <TestimonialCarousel testimonials={TESTIMONIALS} />
       </section>
 
       {/* FAQ */}
