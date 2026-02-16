@@ -38,74 +38,43 @@ export function CategoryCard({ category }: CategoryCardProps) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-      whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-      whileHover={{ 
-        scale: category.enabled ? 1.08 : 1,
-        y: category.enabled ? -8 : 0,
-        rotate: category.enabled ? 2 : 0,
-      }}
-      whileTap={{ scale: category.enabled ? 0.95 : 1 }}
+      whileHover={{ scale: category.enabled ? 1.05 : 1 }}
+      whileTap={{ scale: category.enabled ? 0.98 : 1 }}
       transition={{ 
         type: "spring",
         stiffness: 200,
-        damping: 15
+        damping: 20
       }}
     >
       <Card
-        className={`relative overflow-hidden cursor-pointer border-2 transition-all duration-300 group ${
+        className={`relative cursor-pointer border-2 transition-all duration-200 ${
           category.enabled
-            ? "border-primary hover:border-primary-strong hover:shadow-2xl bg-gradient-to-br from-background to-gray-light"
-            : "border-border opacity-60 cursor-not-allowed"
+            ? "border-primary/30 hover:border-primary hover:shadow-lg bg-white"
+            : "border-border opacity-50 cursor-not-allowed bg-gray-light"
         }`}
         onClick={handleClick}
       >
-        {/* Efeito de brilho no hover */}
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/10 to-primary-strong/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          initial={false}
-        />
-
-        {/* Decoração de fundo */}
-        <div className="absolute inset-0 opacity-5">
-          <motion.div
-            className="absolute top-2 right-2 w-16 h-16 rounded-full bg-primary"
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.1, 0.2, 0.1],
-            }}
-            transition={{ duration: 3, repeat: Infinity }}
-          />
-        </div>
-
-        <div className="aspect-square p-6 flex flex-col items-center justify-center text-center relative z-10">
-          <motion.div
-            whileHover={{ 
-              scale: 1.2,
-              rotate: [0, -10, 10, -10, 0],
-            }}
-            transition={{ duration: 0.5 }}
-          >
-            <Icon
-              size={48}
-              className={`mb-4 transition-colors ${
-                category.enabled 
-                  ? "text-primary group-hover:text-primary-strong" 
-                  : "text-gray-text"
-              }`}
-            />
-          </motion.div>
-          <motion.span
-            className={`font-bold text-sm transition-colors ${
+        <div className="aspect-square p-5 flex flex-col items-center justify-center gap-3">
+          <Icon
+            size={40}
+            className={`transition-colors ${
               category.enabled 
-                ? "text-dark group-hover:text-primary-strong" 
+                ? "text-primary" 
                 : "text-gray-text"
             }`}
-            whileHover={{ scale: 1.1 }}
+          />
+          <span
+            className={`font-semibold text-sm ${
+              category.enabled 
+                ? "text-dark" 
+                : "text-gray-text"
+            }`}
           >
             {category.label}
-          </motion.span>
+          </span>
         </div>
       </Card>
     </motion.div>
